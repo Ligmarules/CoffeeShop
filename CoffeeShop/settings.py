@@ -28,6 +28,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','coffeemyth-7fd256de6627.herokuapp.com/']
 
+DISABLE_COLLECTSTATIC=1
+
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
 EMAIL_HOST_USER = 'bf0bafda88aa71'
 EMAIL_HOST_PASSWORD = '6332379cd8e038'
