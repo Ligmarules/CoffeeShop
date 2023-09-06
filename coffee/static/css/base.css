@@ -1,0 +1,35 @@
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: #000;
+    background-image:-webkit-image-set('https://shorturl.at/hvEI1')
+}
+
+.container h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.container a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container a:hover { 
+    text-decoration: underline;
+}
+

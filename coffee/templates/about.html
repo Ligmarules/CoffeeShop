@@ -1,0 +1,101 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg w3-animate-top navbar-light bg-light">
+      <a class="navbar-brand" href="{% url 'home' %}"><i class="fa fa-fw fa-home"></i>Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" >
+            <a class="nav-link" href="{% url 'about' %}" >About</a>
+          </li>
+
+          <li class="nav-item" >
+            <a class="nav-link" href="{% url 'help' %}">Help</a>          
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" >
+          {% if user.is_authenticated  %}
+            <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+          {% else %}
+             <a href="{% url 'login' %}"class="btn btn-dark"><i class="fa fa-fw fa-user"></i> Login</a>
+          {% endif %}
+            
+        </form>
+      </div>
+    </nav>
+
+
+    <div class="w3-content w3-margin-top" style="max-width:1400px;" >
+      <div class="w3-row-padding">
+        <div class="w3-third">    
+          <div class="w3-white w3-text-grey w3-card-4">
+            <div class="w3-container">
+              <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>About Us</h2>
+              <h6 class="w3-text-teal"><span class="w3-tag w3-teal w3-round">Coffee Shop</span></h6>
+              <p>Welcoming place to enjoy a cup of coffee, a pastry, and some good company. Our friendly and knowledgeable staff is always happy to help you choose the perfect drink. We believe that everyone deserves to enjoy a great cup of coffee, which is why we source our beans from the finest coffee-growing regions around the world. We also roast our beans in small batches, which allows us to control the flavor and quality of our coffee.</p>
+              <hr>
+              <div class="w3-container">
+                <p>In addition to our delicious coffee. The Coffee Shop is a great place to relax and enjoy a cup of coffee. We have a comfortable seating area, as well as free Wi-Fi. We also offer a variety of board games and other activities for our customers to enjoy.
+                  We hope you'll come and visit us soon!</p>
+                <hr>
+              </div>  
+              <br>        
+            </div>
+          </div><br>
+        </div>
+    
+        <div class="w3-twothird">
+          <div class="w3-container w3-card w3-white">
+            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>About Coffee</h2>
+            <div class="w3-container">
+              <h6 class="w3-text-teal"><span class="w3-tag w3-teal w3-round">Roasting</span></h6>
+              <p>The next step in the process is the roasting of green coffee. Coffee is usually sold in a roasted state, and with rare exceptions, such as infusions from green coffee beans, coffee is roasted before it is consumed. It can be sold roasted by the supplier, or it can be home roasted. The roasting process influences the taste of the beverage by changing the coffee bean both physically and chemically. The bean decreases in weight as moisture is lost and increases in volume, causing it to become less dense. The density of the bean also influences the strength of the coffee and the requirements for packaging.</p>
+              <hr>
+            </div>
+            <div class="w3-container">
+              <h6 class="w3-text-teal"><span class="w3-tag w3-teal w3-round">Grading roasted beans</span></h6>
+              <p>Depending on the color of the roasted beans as perceived by the human eye, they will be labeled as light, medium light, medium, medium dark, dark, or very dark. A more accurate method of discerning the degree of roast involves measuring the reflected light from roasted seeds illuminated with a light source in the near-infrared spectrum. This elaborate light meter uses a process known as spectroscopy to return a number that consistently indicates the roasted coffee's relative degree of roast or flavor development. Coffee has, in many countries, been graded by size longer than it has been graded by quality. Grading is generally done with sieves, numbered to indicate the size of the perforations.</p>
+              <hr>
+            </div>
+            <div class="w3-container">
+              <h6 class="w3-text-teal"><span class="w3-tag w3-teal w3-round">Decaffeination</span></h6>
+              <p>Decaffeination of coffee seeds is done while the seeds are still green. Many methods can remove caffeine from coffee, but all involve either soaking the green seeds in hot water (often called the "Swiss water process") or steaming them, then using a solvent to dissolve caffeine-containing oils. Decaffeination is often done by processing companies, and the extracted caffeine is usually sold to the pharmaceutical industry.</p>
+              <hr>
+            </div>         
+          </div>        
+        </div>  
+      </div>
+    </div>
+    
+    <footer class="w3-container w3-animate-bottom w3-teal w3-left-align w3-margin-top">
+      <h2 class="w3-center">contact Us</h2>
+      <ul>
+        <li> <a href="Javascript:void(0)"> <i class="fa fa-map-marker"></i> Location</a></li>
+        <li> <a href="Javascript:void(0)"><i class="fa fa-phone" ></i> Call +01 1234567890</a></li>
+        <li> <a href="Javascript:void(0)"> <i class="fa fa-envelope" ></i> demo@gmail.com</a></li>
+      </ul>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

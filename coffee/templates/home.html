@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block  content %}
+
+<div class="row">
+    {% for coffee in coffee %}  
+        <div class="col">
+            <div class="card" id="item1" style="width: 18rem;">
+                <img src="{{ coffee.image }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ coffee.name }}</h5>       
+                  <p class="card-text">({{ coffee.price }} $)</p>
+                  <div>
+                    <button data-product={{product.id}} data-action="add" class="btn btn-primary update-cart">Add to Cart</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock  %}
