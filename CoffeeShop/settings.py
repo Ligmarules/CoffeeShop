@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-e5uvx8q(@0qnj-p^3pad+mpm94*+q&6yxkrhprk%k-4($ho*xd
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','coffeemyth.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','coffeemyth-7fd256de6627.herokuapp.com/']
 
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
 EMAIL_HOST_USER = 'bf0bafda88aa71'
